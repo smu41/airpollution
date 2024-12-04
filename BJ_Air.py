@@ -10,7 +10,7 @@ st.set_page_config(layout='wide')
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv('~/data/Kaggle/BeijingPM.csv', index_col='No')
+    data = pd.read_csv('BeijingPM.csv', index_col='No')
     data['season'] = data['season'].replace({1: 'Spring', 2: 'Summer', 3: 'Fall', 4: 'Winter'})
     year_range = data['year'].unique()
     month_range = data['month'].unique()
